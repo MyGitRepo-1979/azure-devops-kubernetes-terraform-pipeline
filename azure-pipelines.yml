@@ -23,6 +23,11 @@ stages:
    - job: SecondJob
      steps:
        - bash: echo Second Job
+       - task: CopyFiles@2
+         inputs:
+          SourceFolder: '$(Build.SourcesDirectory)'
+          Contents: '**'
+          TargetFolder: '$(Build.ArtifactStagingDirectory)'
        
 
 
