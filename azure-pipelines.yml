@@ -27,8 +27,8 @@ stages:
          inputs:
           SourceFolder: '$(Build.SourcesDirectory)'
           Contents: |
-             '**/*.yaml'
-             '**/*.tf'
+             **/*.yaml
+             **/*.tf
           TargetFolder: '$(Build.ArtifactStagingDirectory)'
        
 
