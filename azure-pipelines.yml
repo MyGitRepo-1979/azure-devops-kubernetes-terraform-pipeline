@@ -15,11 +15,11 @@ stages:
    - job: FirstJob
      steps:
      - bash: echo Hello, world!
-     - bash: echo $(Buld.BuildNumber)
-     - bash: echo $(Buld.SourceBranchName)
-     - bash: echo $(Buld.SourcesDirectory)
+     - bash: echo $(Build.BuildNumber)
+     - bash: echo $(Build.SourceBranchName)
+     - bash: echo $(Build.SourcesDirectory)
      - bash: echo $(System.DefaultWorkingDirectory)
-     - bash: echo $(Buld.ArtifactStagingDirectory)
+     - bash: echo $(Build.ArtifactStagingDirectory)
    - job: SecondJob
      steps:
        - bash: echo Second Job
