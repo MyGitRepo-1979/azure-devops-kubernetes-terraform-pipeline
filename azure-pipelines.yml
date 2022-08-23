@@ -23,7 +23,7 @@ stages:
    - job: SecondJob
      steps:
        - bash: echo Second Job
-       - bash: echo Content of directory before copy ls -R $(Build.ArtifactStagingDirectory)
+       - bash: ls -R $(Build.ArtifactStagingDirectory)
        - task: CopyFiles@2
          inputs:
           SourceFolder: '$(Build.SourcesDirectory)'
@@ -31,6 +31,6 @@ stages:
              **/*.yaml
              **/*.tf
           TargetFolder: '$(Build.ArtifactStagingDirectory)'
-       - bash: echo Content of directory after copy ls -R $(Build.ArtifactStagingDirectory)
+       - bash: ls -R $(Build.ArtifactStagingDirectory)
 
 
